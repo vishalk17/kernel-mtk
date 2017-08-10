@@ -6719,7 +6719,7 @@ int alloc_contig_range(unsigned long start, unsigned long end,
 		unsigned long pfn;
 		int bt_per_fail = 5;
 #endif
-		pr_info("%s: [%lx, %lx) PFNs busy\n",
+		pr_info_ratelimited("%s: [%lx, %lx) PFNs busy\n",
 			__func__, outer_start, end);
 #if defined(CONFIG_CMA_DEBUG) && defined(CONFIG_PAGE_OWNER)
 		pr_info("========\n");
